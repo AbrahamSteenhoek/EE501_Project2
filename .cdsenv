@@ -1,0 +1,42 @@
+viva.application	vivaWindowMode	string	"window"
+ddserv	showWhatsNew	string	"6.1.5"
+license	VLSL_UseNextLicense	string	"always"
+license	ADEL_UseNextLicense	string	"always"
+license	VSEL_UseNextLicense	string	"always"
+layout            instLibName     string  "cmrf8sf"
+layout            ySnapSpacing    float   0.01
+layout            xSnapSpacing    float   0.01
+
+layoutXL          sfactorNames    string  "sc SC"
+
+hspiceS.envOpts   includeFile     string  "/remote/cadencelib/nda/ibm8rfcmos/IBM_PDK/cmrf8sf/relDM/HSPICE/models/hspice_example.include"
+hspiceS.envOpts   includeSyntax   string  "hspice"
+hspiceS.opts      TNOM            string  "25"
+hspiceD.envOpts  modelFiles       string  "/remote/cadencelib/nda/ibm8rfcmos/IBM_PDK/cmrf8sf/relDM/HSPICE/models/hspice_example.include"
+hspiceD.envOpts  includeSyntax    string  "hspice"
+hspiceD.opts     TNOM             string  "25"
+
+;-------------------------------------
+; Add the appropriate model libraries by default
+;-------------------------------------
+spectre.envOpts  modelFiles   string  "/remote/cadencelib/nda/ibm8rfcmos/IBM_PDK/cmrf8sf/relDM/Spectre/models/design.scs \
+                                        /remote/cadencelib/nda/ibm8rfcmos/IBM_PDK/cmrf8sf/relDM/Spectre/models/allModels.scs;tt \
+                                        $CDK_DIR/models/spectre/standalone/ami06N.m \
+                                        $CDK_DIR/models/spectre/standalone/ami06P.m \
+                                        $CDK_DIR/models/spectre/nom/ami06P.m "
+
+spectre.envOpts  includePath  string "/remote/cadencelib/nda/ibm8rfcmos/IBM_PDK/cmrf8sf/relDM/Spectre/models"
+
+spectre.opts     tnom         string  "25"
+iccTranslator.ExportEditor rulesFile string "/remote/cadencelib/nda/ibm8rfcmos/IBM_PDK/cmrf8sf/relDM/cdslib/cmrf8sf/cmrf8sfDM32.vcr"
+
+;---------------------------------------
+; Turn off gravity in the layout
+;---------------------------------------
+layout gravityOn boolean nil
+
+; Set background to white
+viva.rectGraph background string "white"
+
+viva.trace lineThickness string "thick"
+

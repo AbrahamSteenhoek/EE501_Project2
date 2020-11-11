@@ -1,0 +1,14 @@
+# File Created by Nathan Neihart,,,, at Mon Apr  2 09:26:15 2012
+# assisted by CdsLibEditor
+# CDS.LIB File Created by Nathan Neihart
+
+include ~/cds.lib
+
+SOFTINCLUDE $SYSTEM_CDS_LIB_DIR/cds.lib
+
+# PDK Libraries
+DEFINE cmrf8sf /remote/cadencelib/nda/ibm8rfcmos/IBM_PDK/cmrf8sf/relDM/cdslib/cmrf8sf
+DEFINE esd8rf /remote/cadencelib/nda/ibm8rfcmos/IBM_PDK/cmrf8sf/relDM/cdslib/esd8rf
+
+#Removed by ddDeleteObj: DEFINE RRI#2damp /home/astee/ee501/EE501_Project2_cdsgit/RRI#2damp
+DEFINE Project2 /home/astee/ee501/EE501_Project2_cdsgit/Project2
